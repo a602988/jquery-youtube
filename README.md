@@ -1,19 +1,19 @@
 # jquery-youtube
 
-## What it does
-1. Wraps up YouTube iFrame API with jQuery access ```$('#ytplayer').play()```
-2. Lays out events by name instead of the original state change 1, 2, 3... (```onReady, onStart, onPause, onEnd...```)
-3. Adds API for full-screen feature ```$('#player').toggleFullScreen()```
+## 它能做什麼
+1. 包裝 YouTube iFrame API 使用於 jquery ```$('#ytplayer').play()```
+2. 事件採用名稱替代元的數字... (```onReady, onStart, onPause, onEnd...```)
+3. 增加實現全螢幕功能 ```$('#player').toggleFullScreen()```
 4. Adds a patch for the wmode issue
-5. Ensures API compatibility for IE10/9
-5. Solves bug on OSX Safari, when user had installed flash previously
+5. 保證  API 相容於 IE10/9
+5. 解決在 OSX Safari , 之前安裝過 flash  問題
 
-## How to install
+## 如合安裝
 ```
 yarn add jquery-youtube
 ```
 
-## How to use
+## 如何使用
 
 #### HTML
 ```html
@@ -22,7 +22,7 @@ yarn add jquery-youtube
 
 #### CSS
 ```css
-/* If you want the full-screen API to work across platforms, add this to your stylesheet: */
+/* jquery-youtube.js 全螢幕需增加的樣式 */
 :-webkit-full-screen{
     top: 0;
     width: 100%;
@@ -46,14 +46,14 @@ yarn add jquery-youtube
 
 #### JavaScript
 ```javascript
-// Initialise
+// 初始化
 $('#ytplayer').YTplayer({});
 
-// With configurations
+// 配置
 $('#ytplayer').YTplayer({
     // Basic setting
-    width: 1000,                // video width
-    height: 560,                // video height
+    width: 1000,                // 視頻寬度
+    height: 560,                // 視頻高度
     videoId: 'n4JD-3-UAzM',     // youtube video id
 
     // Events
